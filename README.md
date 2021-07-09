@@ -35,20 +35,15 @@ Button](https://github.com/bwbellmath/report_driven_template/fork_button.jpg)
    [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 ## pip and conda
-pip install gitpython
-pip install pandas
-pip install numpy
-pip install gitpython
-pip install tabulate
-
+1. `conda install numpy pandas gitpython tabulate matplotlib`
 
 ## running the code, committing and pushing to github
 0. Edit `latex_header.tex` to add yourself as `\author` and change the title
-1. python report.py
-2. Latex report.tex
+1. `python report.py`
+2. `latex report.tex`
 3. `git add img/*.png` if you have added any plot images
-4. git commit -am "[describe what you have done]"
-5. git push
+4. `git commit -am "[describe what you have done]"`
+5. `git push`
 
 ## Code Development Suggestions:
 1. Print all of your results to the output files -- never manually
