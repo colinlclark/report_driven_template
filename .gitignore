@@ -508,4 +508,7 @@ tags
 # Persistent undo
 [._]*.un~
 
-# End of https://www.toptal.com/developers/gitignore/api/python,latex,emacs,vim.DS_Store
+.DS_Store
+
+# End of https://www.toptal.com/developers/gitignore/api/python,latex,emacs,vim
+
