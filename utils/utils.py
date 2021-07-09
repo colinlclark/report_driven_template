@@ -28,8 +28,10 @@ class Report(object):
       desc_head = self.header
       print("{}\n".format(desc_md), file=open(self.fo_md,"w"))
       # make sure header is written first to latex file
-      print("{}\n".format(desc_head), file=open(self.fo_tex,"w"))
-      print("{}\n".format(desc_tex), file=open(self.fo_tex,"w"))
+      with open(self.fo_tex, "w") as f:
+        f.writelines(desc_head)
+      #print("{}\n".format(desc_head), file=open(self.fo_tex,"w"))
+      print("{}\n".format(desc_tex), file=open(self.fo_tex,"a"))
       self.first = False
     else:
       print("{}\n".format(desc_md), file=open(self.fo_md,"a"))
@@ -65,7 +67,7 @@ class Report(object):
 
     desc = "{} \n Image URL : {}{}\n Image DIR : {}".format(line, url, f_img, f_img)
     desc_md = desc + "![{}]({}{})".format(f_img, url, f_img)
-    desc_tex = "\includegraphics[width=0.9\textwidth]{{{}}}".format(f_img)
+    desc_tex = "\includegraphics[width=0.9\\textwidth]{{{}}}".format(f_img)
     self.summary_print(desc, desc_md, desc_tex)
 
   def w_table(self, line, df_table):
@@ -75,6 +77,6 @@ class Report(object):
     self.summary_print(desc, desc_md, desc_tex)
   # make sure to do this last
   def w_tail(self):
-    tail = "\end{{document}}"
+    tail = "\end{document}"
     print(tail, file=open(self.fo_tex,"a"))
 
