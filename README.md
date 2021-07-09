@@ -8,7 +8,7 @@ Report Driven Template for experiments
 2. in the top right corner, click "Fork" and create a fork under your
 own github account. 
 ![Fork
-Button](https://github.com/bwbellmath/report_driven_template/fork_button.jpg)
+Button](https://github.com/bwbellmath/report_driven_template/blob/main/img/fork_button.jpg)
 3. In your fork of *report_driven_template* click the "Code" button
    and copy the URL to *clone* the repo into a directory on your
    computer. 
