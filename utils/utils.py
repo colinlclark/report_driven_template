@@ -17,7 +17,7 @@ class Report(object):
     self.first = True
     # read header file from repo
   
-    with open("latex_header.tex", "r") as file_header:
+    with open("utils/latex_header.tex", "r") as file_header:
       self.header = file_header.readlines()
 
 

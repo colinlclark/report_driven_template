@@ -62,20 +62,20 @@ Button](https://github.com/bwbellmath/report_driven_template/blob/main/img/fork_
 File where extensions and files that should *not* be included in the
 git repo are listed -- preconfigured for python, LaTeX, emacs, and vim
 
-##  `project.py`
+##  `my_project.py`
 Script where your experiment is performed
 
-##  `project.tex`
+##  `report_for_my_project.tex`
 LaTeX document that is *produced* by project.py and stored in git for
 reuse later. 
-##  `latex_header.tex`
+##  `utils/latex_header.tex`
 Header for your latex document -- preconfigured with everything you
 need (and way more...)
 
-##  `project.pdf`
+##  `report_for_my_project.pdf`
 PDF file created for `project.tex` stored in git for convenience
 
-##  `project.md`
+##  `report_for_my_project.md`
 Markdown formatted output for your 
 
 ##  `utils/utils.py`
@@ -86,7 +86,7 @@ can be stored. All of the .markdown and .pdf print things live here.
 Directory where output images will be stored
 
 ##  `data/`
-Directory where ourput data will be stored -- you can change this to a
+Directory where output data will be stored -- you can change this to a
 location outside of the repo if you'll be producing *very* large files.
 
 ##  `img/plot.png`
