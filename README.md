@@ -4,7 +4,7 @@ Report Driven Template for experiments
 # Setup Instructions
 ## fork THIS repo
 1. navigate to
-   [https://github.com/bwbellmath/report_driven_template.git](https://github.com/bwbellmath/report_driven_template.git)
+   [https://github.com/colinlclark/report_driven_template.git](https://github.com/bwbellmath/report_driven_template.git)
 2. in the top right corner, click "Fork" and create a fork under your
 own github account. 
 ![Fork
@@ -38,18 +38,19 @@ Button](https://github.com/bwbellmath/report_driven_template/blob/main/img/fork_
 1. `conda install numpy pandas gitpython tabulate matplotlib`
 
 ## running the code, committing and pushing to github
-0. Edit `latex_header.tex` to add yourself as `\author` and change the title
-1. `python report.py`
-2. `latex report.tex`
+0. Edit `utils/latex_header.tex` to add yourself as `\author` and change the title
+1. `python my_project.py`
+2. `latex report_for_my_project.tex`
 3. `git add img/*.png` if you have added any plot images
-4. `git commit -am "[describe what you have done]"`
-5. `git push`
+4. `git add data/*.csv` if you have added any plot images
+5. `git commit -am "[describe what you have done]"`
+6. `git push`
 
 ## Code Development Suggestions:
 1. Print all of your results to the output files -- never manually
    generate an important result -- never consider an experiment
-   *finished* until it is securely documented in the `project.pdf` or
-   `project.md` file on github. 
+   *finished* until it is securely documented in the `report_for_my_project.pdf` or
+   `report_for_my_project.md` file on github. 
 2. Add commentary as you go, don't generate a *naked* result and move
    on to the next experiment without wrapping it up by writing some
    notes about how you arrived at that result and your interpretation
@@ -68,9 +69,6 @@ Script where your experiment is performed
 ##  `report_for_my_project.tex`
 LaTeX document that is *produced* by project.py and stored in git for
 reuse later. 
-##  `utils/latex_header.tex`
-Header for your latex document -- preconfigured with everything you
-need (and way more...)
 
 ##  `report_for_my_project.pdf`
 PDF file created for `project.tex` stored in git for convenience
@@ -82,14 +80,21 @@ Markdown formatted output for your
 File where functions that are shared among multiple experiment scripts
 can be stored. All of the .markdown and .pdf print things live here. 
 
+##  `utils/latex_header.tex`
+Header for your latex document -- preconfigured with everything you
+need (and way more...)
+
 ##  `img/`
 Directory where output images will be stored
+
+##  `img/My_Plot.png`
+The Image file produced by our particular block of code. 
 
 ##  `data/`
 Directory where output data will be stored -- you can change this to a
 location outside of the repo if you'll be producing *very* large files.
 
-##  `img/plot.png`
-The Image file produced by our particular block of code. 
+##  `data/My_Table.csv`
+The data file produced by our particular block of code. 
 
 
